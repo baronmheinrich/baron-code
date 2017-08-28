@@ -1,0 +1,11 @@
+C:\Revature\baron-code\qatest\obj\Debug\netcoreapp2.0\qatest.csproj.CoreCompileInputs.cache
+C:\Revature\baron-code\qatest\obj\Debug\netcoreapp2.0\qatest.AssemblyInfoInputs.cache
+C:\Revature\baron-code\qatest\obj\Debug\netcoreapp2.0\qatest.AssemblyInfo.cs
+C:\Revature\baron-code\qatest\bin\Debug\netcoreapp2.0\qatest.deps.json
+C:\Revature\baron-code\qatest\bin\Debug\netcoreapp2.0\qatest.runtimeconfig.json
+C:\Revature\baron-code\qatest\bin\Debug\netcoreapp2.0\qatest.runtimeconfig.dev.json
+C:\Revature\baron-code\qatest\bin\Debug\netcoreapp2.0\qatest.dll
+C:\Revature\baron-code\qatest\bin\Debug\netcoreapp2.0\qatest.pdb
+C:\Revature\baron-code\qatest\obj\Debug\netcoreapp2.0\qatest.dll
+C:\Revature\baron-code\qatest\obj\Debug\netcoreapp2.0\qatest.pdb
+C:\Revature\baron-code\qatest\bin\Debug\netcoreapp2.0\Machine.TestAdapter.dll

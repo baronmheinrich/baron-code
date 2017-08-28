@@ -1,0 +1,10 @@
+C:\Revature\baron-code\helloworld\bin\Debug\netcoreapp2.0\helloworld.deps.json
+C:\Revature\baron-code\helloworld\bin\Debug\netcoreapp2.0\helloworld.runtimeconfig.json
+C:\Revature\baron-code\helloworld\bin\Debug\netcoreapp2.0\helloworld.runtimeconfig.dev.json
+C:\Revature\baron-code\helloworld\bin\Debug\netcoreapp2.0\helloworld.dll
+C:\Revature\baron-code\helloworld\bin\Debug\netcoreapp2.0\helloworld.pdb
+C:\Revature\baron-code\helloworld\obj\Debug\netcoreapp2.0\helloworld.csproj.CoreCompileInputs.cache
+C:\Revature\baron-code\helloworld\obj\Debug\netcoreapp2.0\helloworld.AssemblyInfoInputs.cache
+C:\Revature\baron-code\helloworld\obj\Debug\netcoreapp2.0\helloworld.AssemblyInfo.cs
+C:\Revature\baron-code\helloworld\obj\Debug\netcoreapp2.0\helloworld.dll
+C:\Revature\baron-code\helloworld\obj\Debug\netcoreapp2.0\helloworld.pdb

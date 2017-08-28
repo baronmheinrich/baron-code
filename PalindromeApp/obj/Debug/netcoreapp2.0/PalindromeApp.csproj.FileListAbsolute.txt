@@ -1,0 +1,3 @@
+C:\Revature\baron-code\PalindromeApp\obj\Debug\netcoreapp2.0\PalindromeApp.csproj.CoreCompileInputs.cache
+C:\Revature\baron-code\PalindromeApp\obj\Debug\netcoreapp2.0\PalindromeApp.AssemblyInfoInputs.cache
+C:\Revature\baron-code\PalindromeApp\obj\Debug\netcoreapp2.0\PalindromeApp.AssemblyInfo.cs

@@ -1,0 +1,10 @@
+C:\Revature\baron-code\InClass\String\bin\Debug\netcoreapp2.0\String.deps.json
+C:\Revature\baron-code\InClass\String\bin\Debug\netcoreapp2.0\String.runtimeconfig.json
+C:\Revature\baron-code\InClass\String\bin\Debug\netcoreapp2.0\String.runtimeconfig.dev.json
+C:\Revature\baron-code\InClass\String\bin\Debug\netcoreapp2.0\String.dll
+C:\Revature\baron-code\InClass\String\bin\Debug\netcoreapp2.0\String.pdb
+C:\Revature\baron-code\InClass\String\obj\Debug\netcoreapp2.0\String.csproj.CoreCompileInputs.cache
+C:\Revature\baron-code\InClass\String\obj\Debug\netcoreapp2.0\String.AssemblyInfoInputs.cache
+C:\Revature\baron-code\InClass\String\obj\Debug\netcoreapp2.0\String.AssemblyInfo.cs
+C:\Revature\baron-code\InClass\String\obj\Debug\netcoreapp2.0\String.dll
+C:\Revature\baron-code\InClass\String\obj\Debug\netcoreapp2.0\String.pdb
