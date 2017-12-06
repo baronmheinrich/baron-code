@@ -1,0 +1,9 @@
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\bin\Debug\netcoreapp2.0\ContactApp.DataAccess.deps.json
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\bin\Debug\netcoreapp2.0\ContactApp.DataAccess.dll
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\bin\Debug\netcoreapp2.0\ContactApp.DataAccess.pdb
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\obj\Debug\netcoreapp2.0\ContactApp.DataAccess.csprojResolveAssemblyReference.cache
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\obj\Debug\netcoreapp2.0\ContactApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\obj\Debug\netcoreapp2.0\ContactApp.DataAccess.AssemblyInfoInputs.cache
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\obj\Debug\netcoreapp2.0\ContactApp.DataAccess.AssemblyInfo.cs
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\obj\Debug\netcoreapp2.0\ContactApp.DataAccess.dll
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.DataAccess\obj\Debug\netcoreapp2.0\ContactApp.DataAccess.pdb

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="Author" content="Lana B">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title> </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js">
+  
+    
+    <style></style>
+  </head>
+  <body data-ng-app="helloWorld">
+    <header>
+      <hgroup>
+          <h1>Ebony Memento Mori</h1>
+          <h2>M2 to Use</h2>
+      </hgroup>
+    </header>
+    <nav>
+      <ul>
+        <li>Meg</li>
+        <li>Claudette</li>
+        <li>Dwight</li>
+        <li>Jake</li>
+        <li>Laurie</li>
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <header></header>
+        <footer></footer>
+      </section>
+      
+      <section>
+        <article>
+          <figure>
+            <img src="./salty.jpg" alt="Hymillaina Salty">
+            <figcaption>FREE SALTY WITH EVERY HOOK</figcaption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, mauris ut elementum condimentum, ligula urna viverra purus, nec tristique enim purus et dui. Fusce lacinia metus vitae bibendum malesuada. Maecenas quis tortor mattis, lacinia tortor sed, eleifend libero. Fusce viverra est non rutrum efficitur. Quisque ipsum risus, tempor sit amet lacus sit amet, gravida aliquam ex. Nulla fermentum dapibus laoreet. Quisque semper nulla sed dolor pulvinar, vitae fringilla nisl consectetur. Aliquam non rutrum est. Duis venenatis odio vel orci posuere aliquet. Pellentesque tempus neque eu nulla pretium feugiat. Duis imperdiet consequat est aliquam gravida. Phasellus vestibulum risus velit, nec vehicula felis volutpat eget. Fusce molestie ligula arcu, quis tempor est feugiat eget. Mauris eu lacinia leo.</p>
+        </article>
+
+        <input type="text" data-ng-model="saythis">
+        <p>{{saythis}}</p>
+      </section>
+      <section></section>
+      <div data-ng-view></div>
+    </main>
+    <aside>
+      <blockquote>Hook 1 get 1 33% off</blockquote>
+      <blockquote>Hook 2 get 2 packets of salt for free</blockquote>
+     
+      <fredFunc></fredFunc>
+    </aside>
+
+    <footer>
+      <nav>
+      <ul>
+        <li><a href="sitemap.html">sitemap</a></li>
+        <li><a href="history.html">history</a></li>
+        <li><a href="contactus.html">contact</a></li>
+      </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li>Facebook</li>
+          <li>Instagram</li>
+          <li>Twattir</li>
+          <li>Pinterest</li>
+        </ul>
+      </nav>
+      <small>copyright &copy; 2017 Lana B, all rights reserved.  <debbie></debbie></small>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="./script/ngapp.js"></script>
+    <script src="./home/controller.js"></script>
+    <script src="./contact/controller.js"></script>
+    <script src="./contact/service.js"></script>
+    <script src="./contact/directive.js"></script>
+    <!-- <script defer="defer" prefetch="" async=""></script>   -->
+
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_Layout</title>
+    @RenderSection("headsection", required: false)
+</head>
+<body>
+    @RenderBody()
+    @{
+        Html.RenderPartial("~/Views/Home/Index.cshtml");
+    }
+    @Html.Partial("~/Views/Home/Index.cshtml")
+
+    @RenderSection("script", required: true)
+</body>
+
+
+</html>

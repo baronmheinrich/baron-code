@@ -1,0 +1,17 @@
+<section>
+
+  <form action="" method="post">
+
+    <label for="cname">Name</label>
+    <input type="text" id="cname" name="cname" data-ng-model="contact.name">
+    <label for="cemail">Email</label>
+    <input type="email" id="cemail" name="cemail" data-ng-model="contact.email">
+    <label for="cnote"></label>
+    <textarea name="cnote" id="cnote" cols="30" rows="10" data-ng-model="contact.note"></textarea>
+    <button type="button" data-ng-click="formSubmit()">Form Submit</button>
+    <input type="number" data-ng-model="id">
+    <button type="button" data-ng-click="papiSubmit()">Papi Sub</button>
+  </form>
+
+  <span>{{message}}</span>
+</section>

@@ -1,0 +1,10 @@
+-p C:\Program Files\dotnet\dotnet.exe
+-pidFile C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Client\bin\IISSupport\pidfile.txt
+-wd C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Client
+-a exec "C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Client\bin\Debug\netcoreapp2.0\ContactApp.Client.dll"
+-wbe Global\Build6da02310-b493-4dd5-8130-4f6aa5bc988d
+-lse Global\Launchbaa02f62-05cd-4be8-803e-b347c0aeffbc
+-pipe 7f0e6dd4-4d23-410e-bcbe-bd93db7547e0
+-pr ContactApp.Client
+-owningPid 8256
+-env ASPNETCORE_CONTENTROOT=C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Client|ASPNETCORE_HOSTINGSTARTUPASSEMBLIES=Microsoft.AspNetCore.ApplicationInsights.HostingStartup|ASPNETCORE_ENVIRONMENT=Development|COMPLUS_ForceENC=1|

@@ -1,0 +1,53 @@
+node {
+   stage('IMPORT') {
+       
+      git 'https://github.com/1708-aug21-net/baron-code.git'
+   }
+   
+   stage('ANALYZE')
+   {
+       dir('hellopipeline/JenkinsOps/')
+       {
+          bat 'C:\\Tools\\SonarQube\\Scanner\\SonarQube.Scanner.MSBuild.exe begin /n:"jenkinsops" /k:"jops" /v:"v1.0" '
+          bat '"C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\\Bin\\msbuild.exe" jenkinsops.csproj /t:rebuild'
+          bat 'C:\\Tools\\SonarQube\\Scanner\\SonarQube.Scanner.MSBuild.exe end'
+       }
+   }
+   
+   stage('BUILD')
+   {
+       dir('hellopipeline/JenkinsOps/')
+       {
+           bat '"C:\\Program Files\\dotnet\\dotnet.exe" build'
+       }
+   }
+   
+   /*
+   stage('TEST')
+   {
+       dir('hellopipeline/JenkinsOps/')
+       {
+           bat 'dotnet test --output ../testresult.jenkins.xml'
+       }
+   }
+    
+    
+    stage('PACKAGE')
+    {
+        dir('hellopipeline/JenkinsOps/')
+        {
+            bat 'dotnet package --output ../packages'
+        }
+    }
+    */
+    stage('DEPLOY')
+    {
+        dir('hellopipeline/JenkinsOps')
+        {
+            bat '"C:\\Program Files\\dotnet\\dotnet.exe" build /p:DeployOnBuild=true /p:PublishProfile=publish'
+        }
+    }
+    
+   
+   
+}

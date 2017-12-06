@@ -1,0 +1,10 @@
+C:\Revature\baron-code\datanet\obj\Debug\netcoreapp2.0\datanet.csproj.CoreCompileInputs.cache
+C:\Revature\baron-code\datanet\obj\Debug\netcoreapp2.0\datanet.AssemblyInfoInputs.cache
+C:\Revature\baron-code\datanet\obj\Debug\netcoreapp2.0\datanet.AssemblyInfo.cs
+C:\Revature\baron-code\datanet\bin\Debug\netcoreapp2.0\datanet.deps.json
+C:\Revature\baron-code\datanet\bin\Debug\netcoreapp2.0\datanet.runtimeconfig.json
+C:\Revature\baron-code\datanet\bin\Debug\netcoreapp2.0\datanet.runtimeconfig.dev.json
+C:\Revature\baron-code\datanet\bin\Debug\netcoreapp2.0\datanet.dll
+C:\Revature\baron-code\datanet\bin\Debug\netcoreapp2.0\datanet.pdb
+C:\Revature\baron-code\datanet\obj\Debug\netcoreapp2.0\datanet.dll
+C:\Revature\baron-code\datanet\obj\Debug\netcoreapp2.0\datanet.pdb

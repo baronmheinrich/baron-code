@@ -1,0 +1,10 @@
+C:\Revature\baron-code\hellopipeline\JenkinsOps\bin\Debug\netcoreapp2.0\JenkinsOps.deps.json
+C:\Revature\baron-code\hellopipeline\JenkinsOps\bin\Debug\netcoreapp2.0\JenkinsOps.runtimeconfig.json
+C:\Revature\baron-code\hellopipeline\JenkinsOps\bin\Debug\netcoreapp2.0\JenkinsOps.runtimeconfig.dev.json
+C:\Revature\baron-code\hellopipeline\JenkinsOps\bin\Debug\netcoreapp2.0\JenkinsOps.dll
+C:\Revature\baron-code\hellopipeline\JenkinsOps\bin\Debug\netcoreapp2.0\JenkinsOps.pdb
+C:\Revature\baron-code\hellopipeline\JenkinsOps\obj\Debug\netcoreapp2.0\JenkinsOps.csproj.CoreCompileInputs.cache
+C:\Revature\baron-code\hellopipeline\JenkinsOps\obj\Debug\netcoreapp2.0\JenkinsOps.AssemblyInfoInputs.cache
+C:\Revature\baron-code\hellopipeline\JenkinsOps\obj\Debug\netcoreapp2.0\JenkinsOps.AssemblyInfo.cs
+C:\Revature\baron-code\hellopipeline\JenkinsOps\obj\Debug\netcoreapp2.0\JenkinsOps.dll
+C:\Revature\baron-code\hellopipeline\JenkinsOps\obj\Debug\netcoreapp2.0\JenkinsOps.pdb

@@ -1,0 +1,14 @@
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netstandard15.dll
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netstandard15.dll
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\bin\Debug\netcoreapp2.0\ContactApp.Tests.deps.json
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\bin\Debug\netcoreapp2.0\ContactApp.Tests.runtimeconfig.json
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\bin\Debug\netcoreapp2.0\ContactApp.Tests.runtimeconfig.dev.json
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\bin\Debug\netcoreapp2.0\ContactApp.Tests.dll
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\bin\Debug\netcoreapp2.0\ContactApp.Tests.pdb
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\obj\Debug\netcoreapp2.0\ContactApp.Tests.csprojResolveAssemblyReference.cache
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\obj\Debug\netcoreapp2.0\ContactApp.Tests.csproj.CoreCompileInputs.cache
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\obj\Debug\netcoreapp2.0\ContactApp.Tests.AssemblyInfoInputs.cache
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\obj\Debug\netcoreapp2.0\ContactApp.Tests.AssemblyInfo.cs
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\obj\Debug\netcoreapp2.0\ContactApp.Tests.dll
+C:\Revature\baron_code\baron-code\ContactApp\ContactApp.Tests\obj\Debug\netcoreapp2.0\ContactApp.Tests.pdb

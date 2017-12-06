@@ -1,0 +1,10 @@
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\bin\Debug\netcoreapp2.0\TeamServicesOps.deps.json
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\bin\Debug\netcoreapp2.0\TeamServicesOps.runtimeconfig.json
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\bin\Debug\netcoreapp2.0\TeamServicesOps.runtimeconfig.dev.json
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\bin\Debug\netcoreapp2.0\TeamServicesOps.dll
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\bin\Debug\netcoreapp2.0\TeamServicesOps.pdb
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\obj\Debug\netcoreapp2.0\TeamServicesOps.csproj.CoreCompileInputs.cache
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\obj\Debug\netcoreapp2.0\TeamServicesOps.AssemblyInfoInputs.cache
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\obj\Debug\netcoreapp2.0\TeamServicesOps.AssemblyInfo.cs
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\obj\Debug\netcoreapp2.0\TeamServicesOps.dll
+C:\Revature\baron-code\hellopipeline\TeamServicesOps\obj\Debug\netcoreapp2.0\TeamServicesOps.pdb

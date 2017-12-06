@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="baron_project1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="courseDateTime">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="courseID" Type="int" Nullable="false" />
+          <Property Name="courseDate1" Type="int" Nullable="false" />
+          <Property Name="courseDate2" Type="int" />
+          <Property Name="courseDate3" Type="int" />
+          <Property Name="courseDate4" Type="int" />
+          <Property Name="courseDate5" Type="int" />
+          <Property Name="courseTime" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="courses">
+          <Key>
+            <PropertyRef Name="courseID" />
+          </Key>
+          <Property Name="courseID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="courseDepartment" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="courseName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="courseNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="courseEnrollment" Type="int" Nullable="false" />
+          <Property Name="courseCapacity" Type="int" Nullable="false" />
+          <Property Name="courseTime" Type="int" Nullable="false" />
+          <Property Name="courseDate" Type="int" Nullable="false" />
+          <Property Name="professorID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="professor">
+          <Key>
+            <PropertyRef Name="professorID" />
+          </Key>
+          <Property Name="professorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="professorFirst" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="professorLast" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="professorCourseList">
+          <Key>
+            <PropertyRef Name="professorCourseListID" />
+          </Key>
+          <Property Name="professorCourseListID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="professorID" Type="int" Nullable="false" />
+          <Property Name="studentID" Type="int" Nullable="false" />
+          <Property Name="courseID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="studentID" />
+          </Key>
+          <Property Name="studentID" Type="int" Nullable="false" />
+          <Property Name="studentFirst" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="studentLast" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="studentCourseList">
+          <Key>
+            <PropertyRef Name="studentCourseList" />
+          </Key>
+          <Property Name="studentCourseList" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="studentID" Type="int" Nullable="false" />
+          <Property Name="courseID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'baron_project1.sys.database_firewall_rules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="database_firewall_rules">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="start_ip_address" />
+            <PropertyRef Name="end_ip_address" />
+            <PropertyRef Name="create_date" />
+            <PropertyRef Name="modify_date" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="start_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="end_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="create_date" Type="datetime" Nullable="false" />
+          <Property Name="modify_date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_courseDateTime_courseID">
+          <End Role="courses" Type="Self.courses" Multiplicity="1" />
+          <End Role="courseDateTime" Type="Self.courseDateTime" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="courses">
+              <PropertyRef Name="courseID" />
+            </Principal>
+            <Dependent Role="courseDateTime">
+              <PropertyRef Name="courseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_courses_courseDate">
+          <End Role="courseDateTime" Type="Self.courseDateTime" Multiplicity="1" />
+          <End Role="courses" Type="Self.courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="courseDateTime">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="courses">
+              <PropertyRef Name="courseDate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_courses_professorID">
+          <End Role="professor" Type="Self.professor" Multiplicity="1" />
+          <End Role="courses" Type="Self.courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="professor">
+              <PropertyRef Name="professorID" />
+            </Principal>
+            <Dependent Role="courses">
+              <PropertyRef Name="professorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_professorCourseList_courseID">
+          <End Role="courses" Type="Self.courses" Multiplicity="1" />
+          <End Role="professorCourseList" Type="Self.professorCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="courses">
+              <PropertyRef Name="courseID" />
+            </Principal>
+            <Dependent Role="professorCourseList">
+              <PropertyRef Name="courseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_professorCourseList_professorID">
+          <End Role="professor" Type="Self.professor" Multiplicity="1" />
+          <End Role="professorCourseList" Type="Self.professorCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="professor">
+              <PropertyRef Name="professorID" />
+            </Principal>
+            <Dependent Role="professorCourseList">
+              <PropertyRef Name="professorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_professorCourseList_studentID">
+          <End Role="student" Type="Self.student" Multiplicity="1" />
+          <End Role="professorCourseList" Type="Self.professorCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="studentID" />
+            </Principal>
+            <Dependent Role="professorCourseList">
+              <PropertyRef Name="studentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_studentCourseList_courseID">
+          <End Role="courses" Type="Self.courses" Multiplicity="1" />
+          <End Role="studentCourseList" Type="Self.studentCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="courses">
+              <PropertyRef Name="courseID" />
+            </Principal>
+            <Dependent Role="studentCourseList">
+              <PropertyRef Name="courseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_studentCourseList_studentID">
+          <End Role="student" Type="Self.student" Multiplicity="1" />
+          <End Role="studentCourseList" Type="Self.studentCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="studentID" />
+            </Principal>
+            <Dependent Role="studentCourseList">
+              <PropertyRef Name="studentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="baron_project1ModelStoreContainer">
+          <EntitySet Name="courseDateTime" EntityType="Self.courseDateTime" Schema="proj1" store:Type="Tables" />
+          <EntitySet Name="courses" EntityType="Self.courses" Schema="proj1" store:Type="Tables" />
+          <EntitySet Name="professor" EntityType="Self.professor" Schema="proj1" store:Type="Tables" />
+          <EntitySet Name="professorCourseList" EntityType="Self.professorCourseList" Schema="proj1" store:Type="Tables" />
+          <EntitySet Name="student" EntityType="Self.student" Schema="proj1" store:Type="Tables" />
+          <EntitySet Name="studentCourseList" EntityType="Self.studentCourseList" Schema="proj1" store:Type="Tables" />
+          <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
+            <DefiningQuery>SELECT 
+    [database_firewall_rules].[id] AS [id], 
+    [database_firewall_rules].[name] AS [name], 
+    [database_firewall_rules].[start_ip_address] AS [start_ip_address], 
+    [database_firewall_rules].[end_ip_address] AS [end_ip_address], 
+    [database_firewall_rules].[create_date] AS [create_date], 
+    [database_firewall_rules].[modify_date] AS [modify_date]
+    FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_courseDateTime_courseID" Association="Self.FK_courseDateTime_courseID">
+            <End Role="courses" EntitySet="courses" />
+            <End Role="courseDateTime" EntitySet="courseDateTime" />
+          </AssociationSet>
+          <AssociationSet Name="FK_courses_courseDate" Association="Self.FK_courses_courseDate">
+            <End Role="courseDateTime" EntitySet="courseDateTime" />
+            <End Role="courses" EntitySet="courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_courses_professorID" Association="Self.FK_courses_professorID">
+            <End Role="professor" EntitySet="professor" />
+            <End Role="courses" EntitySet="courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_professorCourseList_courseID" Association="Self.FK_professorCourseList_courseID">
+            <End Role="courses" EntitySet="courses" />
+            <End Role="professorCourseList" EntitySet="professorCourseList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_professorCourseList_professorID" Association="Self.FK_professorCourseList_professorID">
+            <End Role="professor" EntitySet="professor" />
+            <End Role="professorCourseList" EntitySet="professorCourseList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_professorCourseList_studentID" Association="Self.FK_professorCourseList_studentID">
+            <End Role="student" EntitySet="student" />
+            <End Role="professorCourseList" EntitySet="professorCourseList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_studentCourseList_courseID" Association="Self.FK_studentCourseList_courseID">
+            <End Role="courses" EntitySet="courses" />
+            <End Role="studentCourseList" EntitySet="studentCourseList" />
+          </AssociationSet>
+          <AssociationSet Name="FK_studentCourseList_studentID" Association="Self.FK_studentCourseList_studentID">
+            <End Role="student" EntitySet="student" />
+            <End Role="studentCourseList" EntitySet="studentCourseList" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="baron_project1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="courseDateTime">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="courseID" Type="Int32" Nullable="false" />
+          <Property Name="courseDate1" Type="Int32" Nullable="false" />
+          <Property Name="courseDate2" Type="Int32" />
+          <Property Name="courseDate3" Type="Int32" />
+          <Property Name="courseDate4" Type="Int32" />
+          <Property Name="courseDate5" Type="Int32" />
+          <Property Name="courseTime" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cours" Relationship="Self.FK_courseDateTime_courseID" FromRole="courseDateTime" ToRole="courses" />
+          <NavigationProperty Name="courses" Relationship="Self.FK_courses_courseDate" FromRole="courseDateTime" ToRole="courses" />
+        </EntityType>
+        <EntityType Name="cours">
+          <Key>
+            <PropertyRef Name="courseID" />
+          </Key>
+          <Property Name="courseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="courseDepartment" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="courseName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="courseNumber" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="courseEnrollment" Type="Int32" Nullable="false" />
+          <Property Name="courseCapacity" Type="Int32" Nullable="false" />
+          <Property Name="courseTime" Type="Int32" Nullable="false" />
+          <Property Name="courseDate" Type="Int32" Nullable="false" />
+          <Property Name="professorID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="courseDateTimes" Relationship="Self.FK_courseDateTime_courseID" FromRole="courses" ToRole="courseDateTime" />
+          <NavigationProperty Name="courseDateTime" Relationship="Self.FK_courses_courseDate" FromRole="courses" ToRole="courseDateTime" />
+          <NavigationProperty Name="professor" Relationship="Self.FK_courses_professorID" FromRole="courses" ToRole="professor" />
+          <NavigationProperty Name="professorCourseLists" Relationship="Self.FK_professorCourseList_courseID" FromRole="courses" ToRole="professorCourseList" />
+          <NavigationProperty Name="studentCourseLists" Relationship="Self.FK_studentCourseList_courseID" FromRole="courses" ToRole="studentCourseList" />
+        </EntityType>
+        <EntityType Name="professor">
+          <Key>
+            <PropertyRef Name="professorID" />
+          </Key>
+          <Property Name="professorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="professorFirst" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="professorLast" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="courses" Relationship="Self.FK_courses_professorID" FromRole="professor" ToRole="courses" />
+          <NavigationProperty Name="professorCourseLists" Relationship="Self.FK_professorCourseList_professorID" FromRole="professor" ToRole="professorCourseList" />
+        </EntityType>
+        <EntityType Name="professorCourseList">
+          <Key>
+            <PropertyRef Name="professorCourseListID" />
+          </Key>
+          <Property Name="professorCourseListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="professorID" Type="Int32" Nullable="false" />
+          <Property Name="studentID" Type="Int32" Nullable="false" />
+          <Property Name="courseID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cours" Relationship="Self.FK_professorCourseList_courseID" FromRole="professorCourseList" ToRole="courses" />
+          <NavigationProperty Name="professor" Relationship="Self.FK_professorCourseList_professorID" FromRole="professorCourseList" ToRole="professor" />
+          <NavigationProperty Name="student" Relationship="Self.FK_professorCourseList_studentID" FromRole="professorCourseList" ToRole="student" />
+        </EntityType>
+        <EntityType Name="student">
+          <Key>
+            <PropertyRef Name="studentID" />
+          </Key>
+          <Property Name="studentID" Type="Int32" Nullable="false" />
+          <Property Name="studentFirst" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="studentLast" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="professorCourseLists" Relationship="Self.FK_professorCourseList_studentID" FromRole="student" ToRole="professorCourseList" />
+          <NavigationProperty Name="studentCourseLists" Relationship="Self.FK_studentCourseList_studentID" FromRole="student" ToRole="studentCourseList" />
+        </EntityType>
+        <EntityType Name="studentCourseList">
+          <Key>
+            <PropertyRef Name="studentCourseList1" />
+          </Key>
+          <Property Name="studentCourseList1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="studentID" Type="Int32" Nullable="false" />
+          <Property Name="courseID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="cours" Relationship="Self.FK_studentCourseList_courseID" FromRole="studentCourseList" ToRole="courses" />
+          <NavigationProperty Name="student" Relationship="Self.FK_studentCourseList_studentID" FromRole="studentCourseList" ToRole="student" />
+        </EntityType>
+        <EntityType Name="database_firewall_rules">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="start_ip_address" />
+            <PropertyRef Name="end_ip_address" />
+            <PropertyRef Name="create_date" />
+            <PropertyRef Name="modify_date" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <Association Name="FK_courseDateTime_courseID">
+          <End Role="courses" Type="Self.cours" Multiplicity="1" />
+          <End Role="courseDateTime" Type="Self.courseDateTime" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="courses">
+              <PropertyRef Name="courseID" />
+            </Principal>
+            <Dependent Role="courseDateTime">
+              <PropertyRef Name="courseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_courses_courseDate">
+          <End Role="courseDateTime" Type="Self.courseDateTime" Multiplicity="1" />
+          <End Role="courses" Type="Self.cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="courseDateTime">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="courses">
+              <PropertyRef Name="courseDate" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_courses_professorID">
+          <End Role="professor" Type="Self.professor" Multiplicity="1" />
+          <End Role="courses" Type="Self.cours" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="professor">
+              <PropertyRef Name="professorID" />
+            </Principal>
+            <Dependent Role="courses">
+              <PropertyRef Name="professorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_professorCourseList_courseID">
+          <End Role="courses" Type="Self.cours" Multiplicity="1" />
+          <End Role="professorCourseList" Type="Self.professorCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="courses">
+              <PropertyRef Name="courseID" />
+            </Principal>
+            <Dependent Role="professorCourseList">
+              <PropertyRef Name="courseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_studentCourseList_courseID">
+          <End Role="courses" Type="Self.cours" Multiplicity="1" />
+          <End Role="studentCourseList" Type="Self.studentCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="courses">
+              <PropertyRef Name="courseID" />
+            </Principal>
+            <Dependent Role="studentCourseList">
+              <PropertyRef Name="courseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_professorCourseList_professorID">
+          <End Role="professor" Type="Self.professor" Multiplicity="1" />
+          <End Role="professorCourseList" Type="Self.professorCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="professor">
+              <PropertyRef Name="professorID" />
+            </Principal>
+            <Dependent Role="professorCourseList">
+              <PropertyRef Name="professorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_professorCourseList_studentID">
+          <End Role="student" Type="Self.student" Multiplicity="1" />
+          <End Role="professorCourseList" Type="Self.professorCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="studentID" />
+            </Principal>
+            <Dependent Role="professorCourseList">
+              <PropertyRef Name="studentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_studentCourseList_studentID">
+          <End Role="student" Type="Self.student" Multiplicity="1" />
+          <End Role="studentCourseList" Type="Self.studentCourseList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="student">
+              <PropertyRef Name="studentID" />
+            </Principal>
+            <Dependent Role="studentCourseList">
+              <PropertyRef Name="studentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="baron_project1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="courseDateTimes" EntityType="Self.courseDateTime" />
+          <EntitySet Name="courses" EntityType="Self.cours" />
+          <EntitySet Name="professors" EntityType="Self.professor" />
+          <EntitySet Name="professorCourseLists" EntityType="Self.professorCourseList" />
+          <EntitySet Name="students" EntityType="Self.student" />
+          <EntitySet Name="studentCourseLists" EntityType="Self.studentCourseList" />
+          <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+          <AssociationSet Name="FK_courseDateTime_courseID" Association="Self.FK_courseDateTime_courseID">
+            <End Role="courses" EntitySet="courses" />
+            <End Role="courseDateTime" EntitySet="courseDateTimes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_courses_courseDate" Association="Self.FK_courses_courseDate">
+            <End Role="courseDateTime" EntitySet="courseDateTimes" />
+            <End Role="courses" EntitySet="courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_courses_professorID" Association="Self.FK_courses_professorID">
+            <End Role="professor" EntitySet="professors" />
+            <End Role="courses" EntitySet="courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_professorCourseList_courseID" Association="Self.FK_professorCourseList_courseID">
+            <End Role="courses" EntitySet="courses" />
+            <End Role="professorCourseList" EntitySet="professorCourseLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_studentCourseList_courseID" Association="Self.FK_studentCourseList_courseID">
+            <End Role="courses" EntitySet="courses" />
+            <End Role="studentCourseList" EntitySet="studentCourseLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_professorCourseList_professorID" Association="Self.FK_professorCourseList_professorID">
+            <End Role="professor" EntitySet="professors" />
+            <End Role="professorCourseList" EntitySet="professorCourseLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_professorCourseList_studentID" Association="Self.FK_professorCourseList_studentID">
+            <End Role="student" EntitySet="students" />
+            <End Role="professorCourseList" EntitySet="professorCourseLists" />
+          </AssociationSet>
+          <AssociationSet Name="FK_studentCourseList_studentID" Association="Self.FK_studentCourseList_studentID">
+            <End Role="student" EntitySet="students" />
+            <End Role="studentCourseList" EntitySet="studentCourseLists" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="baron_project1ModelStoreContainer" CdmEntityContainer="baron_project1Entities">
+          <EntitySetMapping Name="courseDateTimes">
+            <EntityTypeMapping TypeName="baron_project1Model.courseDateTime">
+              <MappingFragment StoreEntitySet="courseDateTime">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="courseID" ColumnName="courseID" />
+                <ScalarProperty Name="courseDate1" ColumnName="courseDate1" />
+                <ScalarProperty Name="courseDate2" ColumnName="courseDate2" />
+                <ScalarProperty Name="courseDate3" ColumnName="courseDate3" />
+                <ScalarProperty Name="courseDate4" ColumnName="courseDate4" />
+                <ScalarProperty Name="courseDate5" ColumnName="courseDate5" />
+                <ScalarProperty Name="courseTime" ColumnName="courseTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="courses">
+            <EntityTypeMapping TypeName="baron_project1Model.cours">
+              <MappingFragment StoreEntitySet="courses">
+                <ScalarProperty Name="courseID" ColumnName="courseID" />
+                <ScalarProperty Name="courseDepartment" ColumnName="courseDepartment" />
+                <ScalarProperty Name="courseName" ColumnName="courseName" />
+                <ScalarProperty Name="courseNumber" ColumnName="courseNumber" />
+                <ScalarProperty Name="courseEnrollment" ColumnName="courseEnrollment" />
+                <ScalarProperty Name="courseCapacity" ColumnName="courseCapacity" />
+                <ScalarProperty Name="courseTime" ColumnName="courseTime" />
+                <ScalarProperty Name="courseDate" ColumnName="courseDate" />
+                <ScalarProperty Name="professorID" ColumnName="professorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="professors">
+            <EntityTypeMapping TypeName="baron_project1Model.professor">
+              <MappingFragment StoreEntitySet="professor">
+                <ScalarProperty Name="professorID" ColumnName="professorID" />
+                <ScalarProperty Name="professorFirst" ColumnName="professorFirst" />
+                <ScalarProperty Name="professorLast" ColumnName="professorLast" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="professorCourseLists">
+            <EntityTypeMapping TypeName="baron_project1Model.professorCourseList">
+              <MappingFragment StoreEntitySet="professorCourseList">
+                <ScalarProperty Name="professorCourseListID" ColumnName="professorCourseListID" />
+                <ScalarProperty Name="professorID" ColumnName="professorID" />
+                <ScalarProperty Name="studentID" ColumnName="studentID" />
+                <ScalarProperty Name="courseID" ColumnName="courseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="students">
+            <EntityTypeMapping TypeName="baron_project1Model.student">
+              <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="studentID" ColumnName="studentID" />
+                <ScalarProperty Name="studentFirst" ColumnName="studentFirst" />
+                <ScalarProperty Name="studentLast" ColumnName="studentLast" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="studentCourseLists">
+            <EntityTypeMapping TypeName="baron_project1Model.studentCourseList">
+              <MappingFragment StoreEntitySet="studentCourseList">
+                <ScalarProperty Name="studentCourseList1" ColumnName="studentCourseList" />
+                <ScalarProperty Name="studentID" ColumnName="studentID" />
+                <ScalarProperty Name="courseID" ColumnName="courseID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="database_firewall_rules">
+            <EntityTypeMapping TypeName="baron_project1Model.database_firewall_rules">
+              <MappingFragment StoreEntitySet="database_firewall_rules">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+                <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

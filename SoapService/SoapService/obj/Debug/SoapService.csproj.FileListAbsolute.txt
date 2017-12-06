@@ -1,0 +1,7 @@
+C:\Revature\baron_code\baron-code\SoapService\SoapService\bin\SoapService.dll.config
+C:\Revature\baron_code\baron-code\SoapService\SoapService\bin\SoapService.dll
+C:\Revature\baron_code\baron-code\SoapService\SoapService\bin\SoapService.pdb
+C:\Revature\baron_code\baron-code\SoapService\SoapService\obj\Debug\SoapService.csprojResolveAssemblyReference.cache
+C:\Revature\baron_code\baron-code\SoapService\SoapService\obj\Debug\SoapService.csproj.CoreCompileInputs.cache
+C:\Revature\baron_code\baron-code\SoapService\SoapService\obj\Debug\SoapService.dll
+C:\Revature\baron_code\baron-code\SoapService\SoapService\obj\Debug\SoapService.pdb

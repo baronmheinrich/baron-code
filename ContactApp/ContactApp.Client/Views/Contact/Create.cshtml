@@ -1,0 +1,36 @@
+﻿@model ContactApp.Client.Models.Contact
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+
+    @Html.TextBoxFor(c => c.ContactId)
+    @Html.TextBoxFor(c => c.Name)
+
+    <button type="submit" >Submit</button>
+    
+}
+
+<form action="/contact/create" method="get">
+
+    @Html.ValidationMessageFor(c => c.ContactId)
+    @Html.
+    @Html.TextBoxFor(c => c.ContactId)
+    @Html.TextBoxFor(c => c.Name)
+
+    <button type="submit">Submit Get</button>
+
+</form>
+
+@section script
+{
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+
+
+  }
+

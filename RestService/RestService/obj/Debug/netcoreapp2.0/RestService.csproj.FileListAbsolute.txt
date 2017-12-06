@@ -1,0 +1,11 @@
+C:\Revature\baron_code\baron-code\RestService\RestService\bin\Debug\netcoreapp2.0\RestService.deps.json
+C:\Revature\baron_code\baron-code\RestService\RestService\bin\Debug\netcoreapp2.0\RestService.runtimeconfig.json
+C:\Revature\baron_code\baron-code\RestService\RestService\bin\Debug\netcoreapp2.0\RestService.runtimeconfig.dev.json
+C:\Revature\baron_code\baron-code\RestService\RestService\bin\Debug\netcoreapp2.0\RestService.dll
+C:\Revature\baron_code\baron-code\RestService\RestService\bin\Debug\netcoreapp2.0\RestService.pdb
+C:\Revature\baron_code\baron-code\RestService\RestService\obj\Debug\netcoreapp2.0\RestService.csprojResolveAssemblyReference.cache
+C:\Revature\baron_code\baron-code\RestService\RestService\obj\Debug\netcoreapp2.0\RestService.csproj.CoreCompileInputs.cache
+C:\Revature\baron_code\baron-code\RestService\RestService\obj\Debug\netcoreapp2.0\RestService.AssemblyInfoInputs.cache
+C:\Revature\baron_code\baron-code\RestService\RestService\obj\Debug\netcoreapp2.0\RestService.AssemblyInfo.cs
+C:\Revature\baron_code\baron-code\RestService\RestService\obj\Debug\netcoreapp2.0\RestService.dll
+C:\Revature\baron_code\baron-code\RestService\RestService\obj\Debug\netcoreapp2.0\RestService.pdb

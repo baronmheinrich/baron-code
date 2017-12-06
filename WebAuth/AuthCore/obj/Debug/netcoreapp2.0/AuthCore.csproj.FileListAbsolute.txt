@@ -1,0 +1,11 @@
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\bin\Debug\netcoreapp2.0\AuthCore.deps.json
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\bin\Debug\netcoreapp2.0\AuthCore.runtimeconfig.json
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\bin\Debug\netcoreapp2.0\AuthCore.runtimeconfig.dev.json
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\bin\Debug\netcoreapp2.0\AuthCore.dll
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\obj\Debug\netcoreapp2.0\AuthCore.csprojResolveAssemblyReference.cache
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\obj\Debug\netcoreapp2.0\AuthCore.csproj.CoreCompileInputs.cache
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\obj\Debug\netcoreapp2.0\AuthCore.AssemblyInfoInputs.cache
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\obj\Debug\netcoreapp2.0\AuthCore.AssemblyInfo.cs
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\bin\Debug\netcoreapp2.0\AuthCore.pdb
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\obj\Debug\netcoreapp2.0\AuthCore.dll
+C:\Revature\baron_code\baron-code\WebAuth\AuthCore\obj\Debug\netcoreapp2.0\AuthCore.pdb
